@@ -98,10 +98,6 @@ public class QuestionnaireController {
 		  if(data.getDate() != null) {
 			  questionnaire.setDate(data.getDate());
 		  }
-		  
-		  if(data.getPatientName() != null) {
-			  questionnaire.setPatientName(data.getPatientName());
-		  }
 			  
 		  questionnaire.setSubmitted(data.isSubmitted());
 

@@ -19,8 +19,6 @@ public class FFQuestionnaire implements Serializable {
 	private ObjectId id;
 	@JsonProperty("questionnaireID")
 	private String questionnaireID;
-	@JsonProperty("patientName")
-	private String patientName;
 	@JsonProperty("patientAge")
 	private String patientAge;
 	@JsonProperty("gender")
@@ -35,11 +33,10 @@ public class FFQuestionnaire implements Serializable {
 	
 	public FFQuestionnaire () {}
 	
-	public FFQuestionnaire(String questionnaireID, String patientName,String patientAge, String gender,  Date date, boolean submitted)
+	public FFQuestionnaire(String questionnaireID, String patientAge, String gender,  Date date, boolean submitted)
 	{
 		this.id = new ObjectId();
 		this.questionnaireID = questionnaireID;
-		this.patientName = patientName;
 		this.patientAge = patientAge;
 		this.gender = gender;
 		this.date = date;
@@ -50,7 +47,6 @@ public class FFQuestionnaire implements Serializable {
 	{
 		this.id = new ObjectId();
 		this.questionnaireID = questionnaireID;
-		this.patientName = "";
 		this.patientAge = "";
 		this.gender = "";
 		this.issuerID = issuerID;
@@ -65,15 +61,7 @@ public class FFQuestionnaire implements Serializable {
 	public void setQuestionnaireID(String questionnaireID) {
 		this.questionnaireID = questionnaireID;
 	}
-	
-	public String getPatientName() {
-		return patientName;
-	}
 
-	public void setPatientName(String patientName) {
-		this.patientName = patientName;
-	}
-	
 	public String getPatientAge() {
 		return patientAge;
 	}
